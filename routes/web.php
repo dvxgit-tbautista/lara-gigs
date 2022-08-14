@@ -18,10 +18,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Route::get('posts/{id}', function($id) {
-//     return response('Post ' . $id);
-// })->where('id', '[0-9]+');
+Route::get('posts/{id}', function($id) {
+    return response('Post ' . $id);
+})->where('id', '[0-9]+');
 
-// Route::get('/search', function(Request $request) {
-//     return $request->name. ' '. $request->city. ' ' . $request->age;
-// });
+Route::get('/search', function(Request $request) {
+    return $request->name. ' '. $request->city. ' ' . $request->age;
+});
