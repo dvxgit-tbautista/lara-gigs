@@ -35,6 +35,9 @@ Route::get('/', [ListingController::class, 'index']);
 // Show Create form
 Route::get('/listings/create', [ListingController::class, 'create'])->middleware('auth');
 
+// Manage Listings
+Route::get('/listings/manage', [ListingController::class, 'manage'])->middleware('auth');
+
 //Store Listing Data
 Route::post('/listings', [ListingController::class, 'store'])->middleware('auth');
 
@@ -61,6 +64,8 @@ Route::get('/login', [UserController::class, 'login'])->name('login')->middlewar
 
 // Login user
 Route::post('/users/authenticate', [UserController::class, 'authenticate']);
+
+
 
 //Single Listing
 Route::get('/listings/{listing}', [ListingController::class, 'show']);
