@@ -26,6 +26,8 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Schema::defaultStringLength(191);
+
+        //be aware of what is going to the database if you;re going to use this
         Model::unguard();
     }
 }
