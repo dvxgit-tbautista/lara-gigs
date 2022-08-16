@@ -75,7 +75,7 @@ class ListingController extends Controller
         ]);
 
         if($request->hasFile('logo')) {
-            $formFields['logo'] = $request->file('logo')->store('logos', 'public');
+            $formFields['logo'] = $request->file('logo')->store('images');
         }
 
         $listing->update($formFields);
